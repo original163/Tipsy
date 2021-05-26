@@ -1,9 +1,3 @@
-//
-//  ViewController.swift
-//  tipsy1
-//
-//  Created by Денис Денисов on 26.05.2021.
-//
 
 import UIKit
 
