@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CD16895E266011C60013295B /* ResultsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD16895D266011C60013295B /* ResultsViewController.swift */; };
 		CD1A3218265EBBFB00DB9791 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A3217265EBBFB00DB9791 /* AppDelegate.swift */; };
 		CD1A321A265EBBFB00DB9791 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A3219265EBBFB00DB9791 /* SceneDelegate.swift */; };
 		CD1A321C265EBBFB00DB9791 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CD1A321B265EBBFB00DB9791 /* CalculatorViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CD16895D266011C60013295B /* ResultsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultsViewController.swift; sourceTree = "<group>"; };
 		CD1A3214265EBBFB00DB9791 /* tipsy1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tipsy1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CD1A3217265EBBFB00DB9791 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CD1A3219265EBBFB00DB9791 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -37,6 +39,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		CD16895F266011D80013295B /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				CD1A321B265EBBFB00DB9791 /* CalculatorViewController.swift */,
+				CD16895D266011C60013295B /* ResultsViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		CD1A320B265EBBFB00DB9791 = {
 			isa = PBXGroup;
 			children = (
@@ -58,7 +69,7 @@
 			children = (
 				CD1A3217265EBBFB00DB9791 /* AppDelegate.swift */,
 				CD1A3219265EBBFB00DB9791 /* SceneDelegate.swift */,
-				CD1A321B265EBBFB00DB9791 /* CalculatorViewController.swift */,
+				CD16895F266011D80013295B /* Controllers */,
 				CD1A321D265EBBFB00DB9791 /* Main.storyboard */,
 				CD1A3220265EBBFB00DB9791 /* Assets.xcassets */,
 				CD1A3222265EBBFB00DB9791 /* LaunchScreen.storyboard */,
@@ -140,6 +151,7 @@
 				CD1A321C265EBBFB00DB9791 /* CalculatorViewController.swift in Sources */,
 				CD1A3218265EBBFB00DB9791 /* AppDelegate.swift in Sources */,
 				CD1A321A265EBBFB00DB9791 /* SceneDelegate.swift in Sources */,
+				CD16895E266011C60013295B /* ResultsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

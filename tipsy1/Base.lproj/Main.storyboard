@@ -207,10 +207,10 @@
             </objects>
             <point key="canvasLocation" x="-571" y="55"/>
         </scene>
-        <!--View Controller-->
+        <!--Results View Controller-->
         <scene sceneID="OGS-Mh-ms9">
             <objects>
-                <viewController id="KS0-xj-UZY" sceneMemberID="viewController">
+                <viewController id="KS0-xj-UZY" customClass="ResultsViewController" customModule="tipsy1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7C1-HV-0IG">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
                                         <color key="textColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Total per person" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcV-zU-l5a">
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Итого с человека:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcV-zU-l5a">
                                         <rect key="frame" x="0.0" y="132" width="414" height="36"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="36" id="Usp-PC-HuZ"/>
@@ -262,8 +262,11 @@
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10f"/>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="recalculatePressed:" destination="KS0-xj-UZY" eventType="touchUpInside" id="fR4-zV-9qm"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Split between 2 people, with 10% tip." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBc-ST-OJe">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="результат" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UBc-ST-OJe">
                                 <rect key="frame" x="50" y="305" width="314" height="117"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="117" id="1MO-wX-880"/>
@@ -286,10 +289,14 @@
                             <constraint firstItem="o9h-rb-Qjq" firstAttribute="trailing" secondItem="AyX-R6-mgq" secondAttribute="trailing" id="vih-XU-XcR"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="settingsLabel" destination="UBc-ST-OJe" id="l3c-FM-eFP"/>
+                        <outlet property="totalLabel" destination="lhu-ge-lrP" id="gFZ-Ga-mfM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HL1-Qo-VLU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="674" y="118"/>
+            <point key="canvasLocation" x="96" y="55"/>
         </scene>
     </scenes>
 </document>
