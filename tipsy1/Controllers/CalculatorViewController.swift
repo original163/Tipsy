@@ -3,7 +3,8 @@ import UIKit
 
 class CalculatorViewController: UIViewController {
     
-    var tip = 0.10
+    var tip = 0.0
+    var countOfPeople = 0.0
     
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var zeroPicButton: UIButton!
@@ -29,10 +30,16 @@ class CalculatorViewController: UIViewController {
     
     @IBAction func stepperValueChnged(_ sender: UIStepper) {
         
+        countOfPeople = sender.value
+        let countOfPeopleString = String(Int(countOfPeople))
+        splitNumberLabel.text = countOfPeopleString
     }
     
     @IBAction func calculatePressed(_ sender: UIButton) {
         
+        
+        
+                
     }
     
     
