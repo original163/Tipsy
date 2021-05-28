@@ -6,6 +6,7 @@ class CalculatorViewController: UIViewController {
     var tip = 0.0
     var countOfPeople = 0.0
     var valueForOne = 0.0
+    var bill = 0.0
     
     
     @IBOutlet weak var billTextField: UITextField!
@@ -42,12 +43,21 @@ class CalculatorViewController: UIViewController {
     @IBAction func calculatePressed(_ sender: UIButton) {
         
         let billString = billTextField.text
-        let bill = Double(billString!)
         
-        valueForOne = (bill! * tip) / countOfPeople
-        print(valueForOne)
+        if billString != "" {
+            
+            bill = Double(billString!)!
+            
+            let result = (bill * tip) / countOfPeople
+            let resultString =  String(format: "%.2f", result)
+            
+        } else {
+            billTextField.placeholder = "no input"
+        }
         
         
+        
+    
         
                 
     }
