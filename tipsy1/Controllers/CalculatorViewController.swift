@@ -28,7 +28,7 @@ class CalculatorViewController: UIViewController {
         let buttonTitle = sender.currentTitle!
         var buttonTitleMinusPercentSign =  String(buttonTitle.dropLast())
         let buttonTitleAsANumber = Double(buttonTitleMinusPercentSign)!
-        buttonTitleMinusPercentSign = tipString
+        tipString = buttonTitle
         
         tip = buttonTitleAsANumber / 100
         
@@ -66,7 +66,8 @@ class CalculatorViewController: UIViewController {
             let destinationVC = segue.destination as! ResultsViewController
             
             destinationVC.result = valueForOne
-            
+            destinationVC.countOfPeople = String(format: "%.f", countOfPeople)
+            destinationVC.tip = tipString
         }
     }
     

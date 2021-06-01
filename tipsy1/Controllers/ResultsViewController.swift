@@ -25,6 +25,6 @@ class ResultsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         totalLabel.text = result
-        settingsLabel.text = "Хорошего вечера!"
+        settingsLabel.text = "Разделено между \(countOfPeople) с \(tip) чаевыми."
     }
 }
