@@ -4,10 +4,10 @@ import UIKit
 class CalculatorViewController: UIViewController {
     
     var tip = 0.0
-    var countOfPeople = 0.0
-    var valueForOne = 0.0
+    var countOfPeople = 2.0
+    var valueForOne = ""
     var bill = 0.0
-    
+    var tipString = ""
     
     @IBOutlet weak var billTextField: UITextField!
     @IBOutlet weak var zeroPicButton: UIButton!
@@ -26,8 +26,9 @@ class CalculatorViewController: UIViewController {
         sender.isSelected = true
         
         let buttonTitle = sender.currentTitle!
-        let buttonTitleMinusPercentSign =  String(buttonTitle.dropLast())
+        var buttonTitleMinusPercentSign =  String(buttonTitle.dropLast())
         let buttonTitleAsANumber = Double(buttonTitleMinusPercentSign)!
+        buttonTitleMinusPercentSign = tipString
         
         tip = buttonTitleAsANumber / 100
         
@@ -50,25 +51,35 @@ class CalculatorViewController: UIViewController {
             
             let result = (bill * tip) / countOfPeople
             let resultString =  String(format: "%.2f", result)
+            valueForOne = resultString
+            performSegue(withIdentifier: "goToResult", sender: self)
             
         } else {
+            
             billTextField.placeholder = "no input"
         }
-        
-        
-        
+    }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
-                
+        if segue.identifier == "goToResult" {
+            let destinationVC = segue.destination as! ResultsViewController
+            
+            destinationVC.result = valueForOne
+            
+        }
     }
     
     
-    
-    
-    
-    
-    
-    
-    
 }
+
+
+
+
+
+
+
+
+
+
 

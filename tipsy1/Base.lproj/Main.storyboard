@@ -178,6 +178,10 @@
                                 </userDefinedRuntimeAttributes>
                                 <connections>
                                     <action selector="calculatePressed:" destination="gJx-hF-Gqk" eventType="touchUpInside" id="apa-Iw-bpc"/>
+                                    <segue destination="KS0-xj-UZY" kind="presentation" identifier="goToResult" destinationCreationSelector="segue" id="ktu-h9-7K0">
+                                        <segue key="commit" inheritsFrom="parent" id="vIa-Ap-L7H"/>
+                                        <segue key="preview" inheritsFrom="commit" id="lKm-wu-Syf"/>
+                                    </segue>
                                 </connections>
                             </button>
                         </subviews>
@@ -205,14 +209,14 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lsz-ju-gQj" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-571" y="55"/>
+            <point key="canvasLocation" x="-735" y="55"/>
         </scene>
         <!--Results View Controller-->
         <scene sceneID="OGS-Mh-ms9">
             <objects>
                 <viewController id="KS0-xj-UZY" customClass="ResultsViewController" customModule="tipsy1" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="7C1-HV-0IG">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="o9h-rb-Qjq">
@@ -249,7 +253,7 @@
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hoa-I4-uQR">
-                                <rect key="frame" x="107" y="808" width="200" height="54"/>
+                                <rect key="frame" x="107" y="754" width="200" height="54"/>
                                 <color key="backgroundColor" red="0.0" green="0.69019607839999997" blue="0.41960784309999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="I7v-Cp-0au"/>
@@ -299,4 +303,7 @@
             <point key="canvasLocation" x="96" y="55"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="ktu-h9-7K0"/>
+    </inferredMetricsTieBreakers>
 </document>
